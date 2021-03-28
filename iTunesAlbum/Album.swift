@@ -8,10 +8,6 @@
 import Foundation
 import Alamofire
 
-extension Notification.Name {
-    static let albumUpdated = Notification.Name("albumUpdated")
-    static let bookmarkUpdated = Notification.Name("bookmarkUpdated")
-}
 protocol ObserverProtocol {
     func subscribe()
     func unsubscribe()
@@ -42,7 +38,6 @@ class AlbumData: NSObject {
         if !loading {
             loading = true
             AF.request(API.albumListAPI).responseDecodable(of: AlbumList.self) { response in
-                print("Loading finished")
                 self.loading = false
                 switch response.result {
                 case .success(let data):
@@ -73,13 +68,14 @@ class AlbumData: NSObject {
         NotificationCenter.default.post(name: .albumUpdated, object: nil)
     }
     
-    func bookmark(index: Int) {
-        guard (index + 1) <= self.albumList?.resultCount ?? 0 else {
-            print("bookmark failed")
-            return
+    func bookmark(album: Album) {
+        if let index = self.albumList?.results.firstIndex(where: { (item) -> Bool in
+            item.artistId == album.artistId && item.collectionId == album.collectionId
+        }) {
+            self.albumList?.results[index].bookmark()
+            self.albumList?.updateBookmarkResult()
+            NotificationCenter.default.post(name: .bookmarkUpdated, object: nil)
         }
-        self.albumList?.results[index].bookmark()
-        self.albumList?.updateBookmarkResult()
     }
 }
 
@@ -135,6 +131,5 @@ struct Album: Codable {
     
     mutating func bookmark() {
         self.bookmarked = !(self.bookmarked ?? false)
-        NotificationCenter.default.post(name: .bookmarkUpdated, object: nil)
     }
 }

@@ -15,3 +15,8 @@ extension UIImage {
         }
     }
 }
+
+extension Notification.Name {
+    static let albumUpdated = Notification.Name("albumUpdated")
+    static let bookmarkUpdated = Notification.Name("bookmarkUpdated")
+}
