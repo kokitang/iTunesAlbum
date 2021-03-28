@@ -13,9 +13,14 @@
 		A5AD2A942610A9BA00343CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AD2A922610A9BA00343CCB /* Main.storyboard */; };
 		A5AD2A962610A9BB00343CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AD2A952610A9BB00343CCB /* Assets.xcassets */; };
 		A5AD2A992610A9BB00343CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AD2A972610A9BB00343CCB /* LaunchScreen.storyboard */; };
+		A5AD2AA22610AA1F00343CCB /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD2AA12610AA1F00343CCB /* Album.swift */; };
+		A5AD2AD52610ACA100343CCB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD2AD42610ACA100343CCB /* NetworkManager.swift */; };
+		A5B8E48B2610D163006D748D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8E48A2610D163006D748D /* Extension.swift */; };
+		ED920FC389F7CF4A36050B45 /* libPods-iTunesAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F00BEB61218A8F0FCEFA10A7 /* libPods-iTunesAlbum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93A857BE89E3C4E39D580D74 /* Pods-iTunesAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbum.release.xcconfig"; path = "Target Support Files/Pods-iTunesAlbum/Pods-iTunesAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		A5AD2A892610A9BA00343CCB /* iTunesAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD2A8C2610A9BA00343CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AD2A8E2610A9BA00343CCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		A5AD2A952610A9BB00343CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5AD2A982610A9BB00343CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AD2A9A2610A9BB00343CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AD2AA12610AA1F00343CCB /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A5AD2AD42610ACA100343CCB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A5B8E48A2610D163006D748D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F00BEB61218A8F0FCEFA10A7 /* libPods-iTunesAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iTunesAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48975976BD995307CC6BB51 /* Pods-iTunesAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbum.debug.xcconfig"; path = "Target Support Files/Pods-iTunesAlbum/Pods-iTunesAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED920FC389F7CF4A36050B45 /* libPods-iTunesAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44335DDFE4444F7CC8D331CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F48975976BD995307CC6BB51 /* Pods-iTunesAlbum.debug.xcconfig */,
+				93A857BE89E3C4E39D580D74 /* Pods-iTunesAlbum.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5AD2A802610A9BA00343CCB = {
 			isa = PBXGroup;
 			children = (
 				A5AD2A8B2610A9BA00343CCB /* iTunesAlbum */,
 				A5AD2A8A2610A9BA00343CCB /* Products */,
+				44335DDFE4444F7CC8D331CF /* Pods */,
+				D6FB905CBAACA0A19D28D031 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +80,9 @@
 			children = (
 				A5AD2A8C2610A9BA00343CCB /* AppDelegate.swift */,
 				A5AD2A8E2610A9BA00343CCB /* SceneDelegate.swift */,
+				A5B8E48A2610D163006D748D /* Extension.swift */,
+				A5AD2AA12610AA1F00343CCB /* Album.swift */,
+				A5AD2AD42610ACA100343CCB /* NetworkManager.swift */,
 				A5AD2A902610A9BA00343CCB /* ViewController.swift */,
 				A5AD2A922610A9BA00343CCB /* Main.storyboard */,
 				A5AD2A952610A9BB00343CCB /* Assets.xcassets */,
@@ -67,6 +92,14 @@
 			path = iTunesAlbum;
 			sourceTree = "<group>";
 		};
+		D6FB905CBAACA0A19D28D031 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F00BEB61218A8F0FCEFA10A7 /* libPods-iTunesAlbum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5AD2A9D2610A9BB00343CCB /* Build configuration list for PBXNativeTarget "iTunesAlbum" */;
 			buildPhases = (
+				F6F4D2B8AA7B0D871D921DA1 /* [CP] Check Pods Manifest.lock */,
 				A5AD2A852610A9BA00343CCB /* Sources */,
 				A5AD2A862610A9BA00343CCB /* Frameworks */,
 				A5AD2A872610A9BA00343CCB /* Resources */,
@@ -132,6 +166,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F6F4D2B8AA7B0D871D921DA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTunesAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5AD2A852610A9BA00343CCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,7 +198,10 @@
 			files = (
 				A5AD2A912610A9BA00343CCB /* ViewController.swift in Sources */,
 				A5AD2A8D2610A9BA00343CCB /* AppDelegate.swift in Sources */,
+				A5AD2AD52610ACA100343CCB /* NetworkManager.swift in Sources */,
+				A5B8E48B2610D163006D748D /* Extension.swift in Sources */,
 				A5AD2A8F2610A9BA00343CCB /* SceneDelegate.swift in Sources */,
+				A5AD2AA22610AA1F00343CCB /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +345,14 @@
 		};
 		A5AD2A9E2610A9BB00343CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F48975976BD995307CC6BB51 /* Pods-iTunesAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z5M4YCJ8T4;
 				INFOPLIST_FILE = iTunesAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +360,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kokit.iTunesAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A5AD2A9F2610A9BB00343CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A857BE89E3C4E39D580D74 /* Pods-iTunesAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z5M4YCJ8T4;
 				INFOPLIST_FILE = iTunesAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kokit.iTunesAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
