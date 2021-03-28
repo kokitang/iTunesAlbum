@@ -1,0 +1,6 @@
+module Pods_iTunesAlbum {
+  umbrella header "Pods-iTunesAlbum-umbrella.h"
+
+  export *
+  module * { export * }
+}
